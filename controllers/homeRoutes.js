@@ -41,7 +41,7 @@ router.get('/blog/:id', async (req, res) => {
     const blog = blogData.get({ plain: true });
 
     res.render('blog', {
-      ...blog,
+      ...blogs,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -60,7 +60,7 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log('for user', user);
+    console.log('for user++++++', user);
     res.render('profile', {
       ...user,
       logged_in: true,
