@@ -28,6 +28,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/blog/:id', async (req, res) => {
+  console.log(req.body, req.params.id, 'Updte');
   try {
     const blogData = await Blog.findByPk(req.params.id, {
       include: [
@@ -66,7 +67,7 @@ router.get('/profile', withAuth, async (req, res) => {
       logged_in: true,
     });
   } catch (err) {
-    console.log('error proifle', err);
+    console.log('error profile', err);
     res.status(500).json(err);
   }
 });
