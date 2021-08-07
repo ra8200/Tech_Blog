@@ -5,7 +5,7 @@
 
   Table of Contents
   ------------------
-  * [Github](github)
+  * [Github](#github)
   * [Email](#email)  
   * [Usage](#usage)
   * [Installation](#installation)
